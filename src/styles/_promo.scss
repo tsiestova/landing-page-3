@@ -1,0 +1,129 @@
+.promo__list__wrap {
+  position: relative;
+  margin-bottom: 29px;
+
+  @include breakpoint(tablet) {
+    margin-bottom: 63px;
+  }
+
+  @include breakpoint(desktop) {
+    margin-bottom: 135px;
+    padding-top: 244px;
+  }
+
+  &:before {
+    content: "";
+    background: #fcf8ff;
+    position: absolute;
+    width: 100%;
+    z-index: -2;
+    top: -62px;
+    bottom: 0;
+    clip-path: ellipse(124% 59% at 50% 35%);
+  }
+}
+
+.promo__list {
+  padding-bottom: 143px;
+  padding-top: 119px;
+  max-width: 573px;
+  margin: auto;
+
+  @include breakpoint(tablet) {
+    padding-top: 176px;
+  }
+
+  @include breakpoint(desktop) {
+    display: flex;
+    max-width: 100%;
+    padding-top: 0;
+    gap: 24px;
+  }
+}
+
+.promo__item {
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include breakpoint(tablet) {
+    flex-direction: row;
+    align-items: center;
+    gap: 32px;
+    margin-bottom: 47px;
+  }
+
+  @include breakpoint(desktop) {
+    flex-direction: column;
+    margin-bottom: 0;
+    gap: 66px;
+    flex: 1;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.promo__item_number {
+  @include heading-text;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 46px;
+  text-align: center;
+  color: var(--color1);
+  width: 48px;
+  height: 46px;
+  border-radius: 50%;
+  border: 1px solid var(--color1);
+  margin-bottom: 24px;
+
+  @include breakpoint(tablet) {
+    margin-bottom: 0;
+    flex-shrink: 0;
+  }
+}
+
+.promo__item_heading {
+  @include heading-text;
+  font-weight: 600;
+  font-size: 23px;
+  line-height: 36px;
+  text-align: center;
+  color: var(--color1);
+  margin-bottom: 16px;
+
+  @include breakpoint(tablet) {
+    display: inline-block;
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  @include breakpoint(desktop) {
+    display: block;
+    font-size: 32px;
+    line-height: 40px;
+    margin-bottom: 26px;
+  }
+}
+
+.promo__item_description {
+  @include body-text;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  text-align: center;
+  color: var(--color3);
+
+  @include breakpoint(tablet) {
+    display: inline-block;
+    text-align: left;
+  }
+
+  @include breakpoint(desktop) {
+    text-align: center;
+    font-size: 18px;
+    line-height: 32px;
+  }
+}

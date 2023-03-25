@@ -1,0 +1,154 @@
+@import "var";
+
+.bg__container {
+  padding-bottom: 193px;
+  position: relative;
+
+  @include breakpoint(tablet) {
+    padding-bottom: 229px;
+  }
+
+  @include breakpoint(desktop) {
+    height: 745px;
+  }
+
+  &:before {
+    content: "";
+    background-color: var(--color1);
+    clip-path: ellipse(124% 59% at 50% 35%);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+
+    @include breakpoint(tablet) {
+      background: url("./assets/images/bg-pattern-2.svg") #24053e right -95px bottom
+        136px no-repeat;
+    }
+
+    @include breakpoint(desktop) {
+      background: url("./assets/images/bg-pattern-2.svg") #24053e right -45px bottom
+        241px no-repeat;
+    }
+  }
+
+  &:after {
+    @include breakpoint(tablet) {
+      content: "";
+      background: url("./assets/images/bg-pattern-1.svg") no-repeat;
+      position: absolute;
+      width: 100%;
+      height: 289px;
+      background-size: contain;
+      top: 14%;
+      left: -26%;
+    }
+
+    @include breakpoint(desktop) {
+      top: 18%;
+      left: -112px;
+      width: 311px;
+    }
+  }
+}
+
+.header {
+  height: 98px;
+  margin-bottom: 33px;
+
+  @include breakpoint(tablet) {
+    margin-bottom: 26px;
+  }
+
+  @include breakpoint(desktop) {
+    height: 140px;
+    margin-bottom: 6px;
+  }
+
+  .layout {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  .btn {
+    font-size: 18px;
+  }
+}
+
+.top-box {
+  .layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @include breakpoint(desktop) {
+    .btn {
+      &.btn__primary {
+        min-width: 161px;
+        height: 61px;
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+.top-box__heading {
+  @include heading-text;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 42px;
+  line-height: 50px;
+  text-align: center;
+  color: var(--color4);
+  margin-bottom: 40px;
+
+  @include breakpoint(tablet) {
+    max-width: 360px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 49px;
+    line-height: 60px;
+  }
+
+  @include breakpoint(desktop) {
+    font-size: 70px;
+    line-height: 80px;
+    max-width: 488px;
+    margin-bottom: 38px;
+  }
+
+  a {
+    color: var(--color4);
+    border-bottom: 4px solid var(--color2);
+    text-decoration: none;
+  }
+}
+
+.top-box__picture {
+  width: 320px;
+  height: 184px;
+  position: absolute;
+  bottom: -53px;
+
+  @include breakpoint(tablet) {
+    width: auto;
+    height: 296px;
+    bottom: -122px;
+  }
+
+  @include breakpoint(desktop) {
+    width: 767px;
+    height: 441px;
+    bottom: -170px;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+  }
+}

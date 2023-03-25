@@ -1,0 +1,43 @@
+.footer {
+  height: 240px;
+
+  @include breakpoint(tablet) {
+    height: 252px;
+  }
+
+  @include breakpoint(desktop) {
+    padding-top: 82px;
+  }
+
+  .layout {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    height: 100%;
+  }
+}
+
+.social-media__list {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  justify-content: center;
+}
+
+.social-media__icon {
+  display: inline-block;
+  fill: var(--color3);
+  width: 20px;
+  height: 20px;
+}
+
+.social-media__list {
+  a {
+    &:hover {
+      .social-media__icon {
+        fill: var(--color1);
+      }
+    }
+  }
+}
